@@ -2,6 +2,8 @@ import "./App.css";
 import "./components/ExpenseItem";
 import ExpenseItem from "./components/ExpenseItem";
 
+const expenseItems = createExpenseItems();
+
 function createExpenseItems() {
   const expenses = [
     {
@@ -41,7 +43,6 @@ function createExpenseItems() {
 }
 
 function App() {
-  const expenseItems = createExpenseItems();
   return <div>{expenseItems}</div>;
 }
 

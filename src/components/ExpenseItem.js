@@ -1,13 +1,14 @@
 import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
 
 function ExpenseItem(props) {
   return (
     <div className="expenseItem">
-      <div className="expenseDate">{props.date.toISOString()}</div>
+      <ExpenseDate date={props.expense.date} />
       <div className="expenseTitle">
-        <h2>{props.title}</h2>
+        <h2>{props.expense.title}</h2>
       </div>
-      <div className="expensePrice">${props.amount}</div>
+      <div className="expensePrice">${props.expense.amount}</div>
     </div>
   );
 }
